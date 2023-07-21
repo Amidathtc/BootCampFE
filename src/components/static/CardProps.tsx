@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import img from "../assest/img.jpg"
 
-// interface iCard {
-//     img ? : any;
-//     Text? : string;
-//     color? : string;
-//     smallText ? : string;
-// }
+interface iCard {
+    img ? : any;
+    Text? : string;
+    color? : string;
+    smallText ? : string;
+}
 
-const CardProps = () => {
+const CardProps: React.FC<iCard>= ({ img, Text, color, smallText}) => {
   return (
     <div>
       <Container>
@@ -18,8 +18,8 @@ const CardProps = () => {
                
            <Img  src = {img}/>
            <TextHolder>
-           <BigText></BigText>
-            <SmallText></SmallText>
+           <BigText>{Text}</BigText>
+            <SmallText>{smallText}</SmallText>
            </TextHolder>
             </Card>
         </Main>
@@ -32,25 +32,23 @@ export default CardProps
 
 
 const TextHolder  =styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 const Img = styled.img`
-    width: 230px;
+    width: 220px;
 height: 25vh;
-border-radius: 8px;
+border-radius: 15px;
+margin-top: 10px;
 
 `
 const Card = styled.div`
-width: 290px;
-height: 50vh;
+width: 220px;
+height: 40vh;
 background-color: rgb(215,248,254);
-display: flex;
-border-radius: 8px;
-flex-direction: column;
-align-items: center;
-margin-top: 10%;`
+border-radius: 20px;
+padding: 15px 15px 15px 15px;
+
+/* margin-top: 20px; */
+`
 
 const Container = styled.div`
 display:flex;
@@ -68,8 +66,18 @@ width: 100%;
 
 `
 const BigText = styled.div`
-color : grey;
-font-size: 30px;
-font-weight: medium;
+color : rgb(67, 98, 120);
+font-size: 20px;
+font-weight: bold;
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
 `
-const SmallText = styled.div``
+const SmallText = styled.div`
+font: 100;
+color : rgb(67, 98, 120);
+display: flex;
+flex-direction: column;
+align-items: center;
+`
