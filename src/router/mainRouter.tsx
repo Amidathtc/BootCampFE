@@ -9,9 +9,9 @@ import Register from "../pages/Register"
 export const mainRouter = createBrowserRouter([
     {
         path: "/",
-        element: <PrivateRoute>
+        element:
             <HomeScreen />
-        </PrivateRoute>
+    
     },
     {
         path: "/sign-in",

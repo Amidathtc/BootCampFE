@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../components/static/Header'
 
 const HomeScreen = () => {
   return (
     <div>
-      HomeScreen
+    <Header />
     </div>
   )
 }
