@@ -60,7 +60,7 @@ const Space = styled.div`
 const Container = styled.div`
   width: 100%;
   height: 80px;
-  background-color: #0d0b0b;
+  background-color: #0a6fd3;
   font-size: 14px;
   /* border-bottom: 1px solid black; */
   display: flex;

@@ -7,13 +7,14 @@ interface iCard {
     Text? : string;
     color? : string;
     smallText ? : string;
+  
 }
 
 const CardProps: React.FC<iCard>= ({ img, Text, color, smallText}) => {
   return (
     <div>
-      <Container>
-        <Main>
+     
+       
             <Card>
                
            <Img  src = {img}/>
@@ -22,8 +23,7 @@ const CardProps: React.FC<iCard>= ({ img, Text, color, smallText}) => {
             <SmallText>{smallText}</SmallText>
            </TextHolder>
             </Card>
-        </Main>
-      </Container>
+      
     </div>
   )
 }
@@ -46,25 +46,11 @@ height: 40vh;
 background-color: rgb(215,248,254);
 border-radius: 20px;
 padding: 15px 15px 15px 15px;
+margin: 20px;
 
 /* margin-top: 20px; */
 `
 
-const Container = styled.div`
-display:flex;
-justify-content: center;
-width: 100%;
-height: 90vh;
-
-
-`
-const Main = styled.div`
-display:flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-
-`
 const BigText = styled.div`
 color : rgb(67, 98, 120);
 font-size: 20px;

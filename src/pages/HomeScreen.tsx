@@ -195,17 +195,90 @@
 import React from 'react'
 import Header from '../components/static/Header'
 import CardProps from '../components/static/CardProps'
+// import image from "../components/assest/image2.jpg"
+import image from "../components/assest/Image.jpeg"
+import img from "../components/assest/img.jpg"
+import styled from 'styled-components'
+import HeroPage from './HeroPage'
+import Footer from '../components/static/Footer'
 
 const HomeScreen = () => {
   return (
     <div>
       <Header />
-      <CardProps />
-      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' />
-     
-
+    <CardHolder>
+      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={image} color='pink'  />
+      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='blue' />
+      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='blue' />
+      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='blue' />
+      <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='blue' />
+    </CardHolder>
+  <HeroPage />
+ <HomeHolder>
+ <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='pink'  />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='gold' />
+ </HomeHolder>
+  
+ <HomeHolders>
+ <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='pink'  />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+ </HomeHolders>
+ <Button>Load more</Button>
+<DownHolder>
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+  <CardProps  Text='You have to fight to reach ' smallText='Megan Anderson' img={img} color='green' />
+</DownHolder>
+ <Footer />
     </div>
   )
 }
 
 export default HomeScreen
+
+const DownHolder = styled.div`
+  display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+align-items: center;`
+
+const Button = styled.div`
+   width: 160px;
+    height: 50px;
+    background-color: #1300e3;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+   
+
+
+
+`
+const HomeHolders = styled.div`
+   display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+align-items: center;
+`
+const HomeHolder = styled.div`
+  display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+align-items: center;
+
+`
+const CardHolder = styled.div`
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+align-items: center;
+`
